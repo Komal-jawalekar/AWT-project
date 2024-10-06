@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Forget Password</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'>
+    <style>
+
+
+
+.container {
+    position: relative;
+    width: 900px;
+    max-width: 100%;
+    min-height: 680px;
+
+}
+        #todo_button {
+            color: Black;
+            text-decoration: none;
+            font-size: 25px;
+            border: none;
+            background: none;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #todo_button::before {
+            margin-left: auto;
+        }
+
+        #todo_button::after, #todo_button::before {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            transition: 0.5s;
+        }
+
+        #todo_button:hover::after, #todo_button:hover::before {
+            width: 100%;
+        }
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif;
+        }
+      body
+      {
+        background: url("bg.jpg");
+        height: 100%;
+        background-size: 1400px;
+	background-position: center;
+	background-repeat: no-repeat;
+        background-size: cover;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+}
+.sign-in {
+    left: 25%;
+    width: 50%;
+    z-index: 2;
+      }
+
+
+.otp-field {
+  flex-direction: row;
+  column-gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.otp-field input {
+  height: 45px;
+  width: 42px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1.125rem;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+.otp-field input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.otp-field input::-webkit-inner-spin-button,
+.otp-field input::-webkit-outer-spin-button {
+  display: none;
+}
+
+.resend {
+  font-size: 12px;
+}
+h1{
+color:#19797c;
+}
+
+
+    </style>
+</head>
+<body>
+<div class="container" id="main">
+<div class="sign-in">
+        <form action="#">
+            <h1>Forget Password!</h1>
+
+		<a style="color:gray">After verification of OTP your New Password will be set.</a>
+            
+            <input type="email" name="email" placeholder="Email" required=""><br>
+            <input type="password" name="pwd" placeholder="New Password" required=""><br>
+            <input type="password" name="pwd" placeholder="Confirm Password" required=""><br>
+
+
+            <h4 style="color:gray">Verify OTP</h4>
+            <p style="color:gray">Your code was sent to you via email</p>
+
+            <div class="otp-field mb-4">
+              <input type="number" maxlength="1" />
+              <input type="number"  />
+              <input type="number" />
+              <input type="number" />
+              <input type="number"  />
+              <input type="number"/>
+            </div>
+
+            <p class="resend text-muted mb-0">
+              Didn't receive code? <a href="">Request again</a>
+            </p><br>           
+            <button>Verify</button>
+	    
+        </form>
+    </div> 
+</div>
+</body>
+</html>
